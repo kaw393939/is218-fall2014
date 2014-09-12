@@ -1,6 +1,6 @@
 <?php
 //this is how you instantiate an object 
-  $obj = new example;
+  $obj = new another;
 //this is how you assign a value to a public property
   $obj->name = 'steve';
 //this is how you call a public method
@@ -8,7 +8,7 @@
 //this is how you print the contents of an array or object
   print_r($obj);
 //this is how you define a class
-   class example {
+  class example {
 //this is how you define a public property    
     public $name;
 
@@ -18,8 +18,15 @@
     }
 //this is creating a public method
     public function printHelloWorld() {
-      echo 'Hello world... ' . $this->name;
+      echo 'Hello world... ' . $this->name . "\n";
     }
+    protected function someFunction() {}
+
+    private function someOtherFunction() {}
    }
+
+   class another extends example {}
+
+
 
 ?>
